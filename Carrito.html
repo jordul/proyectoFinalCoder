@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div>
+    <div id="Container">
         <header>
             <a href="/index.html"><img src="/img/hamburguesa-con-queso.png"></a>
         </header>
@@ -48,36 +48,32 @@
         </nav>
         <main>
             <section>
-                <table>
-                    <tr>
-                        <td>Producto</td>
-                        <td>Precio</td>
-                        <td>cantidad</td>
-                        <td>total</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <article>
-                                <figure>
-                                    <img src="/img/Hamburgesa.jpg" alt="Hamburgesa criolla">
-                                </figure>
-                                <aside>
-                                    <h2>Hamburgesa criolla</h2>
-                                    <p>Deliciosa haburguesa con ....</p>
-                                </aside>
-                            </article>
-                        </td>
-                        <td>
-                            <label for=""><u>$14.000</u></label>
-                        </td>
-                        <td>
-                            <input type="button" value="-">
-                            <input type="text" value="1">
-                            <input type="button" value="+">
-                        </td>
-                        <td><label for=""><u>$14.000</u></label></td>
-                    </tr>
-                </table>
+                <div>
+                    <h1><u>Producto</u></h1>
+                    <figure>
+                        <img src="/img/Hamburgesa.jpg" alt="Hamburgesa criolla">
+                    </figure>
+                    <aside>
+                        <h2>Hamburgesa criolla</h2>
+                        <p>Deliciosa haburguesa con ....</p>
+                    </aside>
+                </div>
+                <div>
+                    <h1><u>Precio</u></h1>
+                    <label for=""><u>$14.000</u></label>
+                </div>
+                <div>
+                    <h1><u>Cantidad</u></h1>
+                    <aside>
+                        <input type="button" value="-">
+                        <input type="text" value="1">
+                        <input type="button" value="+">
+                    </aside>
+                </div>
+                <div>
+                    <h1><u>total</u></h1>
+                    <label for=""><u>$14.000</u></label></td>
+                </div>
             </section>
         </main>
         <footer>
