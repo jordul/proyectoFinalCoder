@@ -1,0 +1,74 @@
+#carrito {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    .carrito__compra {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "carrito__compra__img carrito__compra__descripcion"
+            "carrito__compra__img carrito__compra__form"
+        ;
+
+        .carrito__compra__img {
+            margin-left: 1rem;
+            width: 100%;
+            grid-area: carrito__compra__img;
+            
+            img {
+                width: 90%;
+                align-items: center;
+            }
+        }
+
+        .carrito__compra__descripcion {
+            width: 60%;
+            grid-area: carrito__compra__descripcion;
+
+            h2,
+            p {
+                color: #481414;
+            }
+        }
+
+        .carrito__compra__form {
+            width: 60%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas:
+                "valor carrito__compra__form__btnmas carrito__compra__form__btnmenos"
+                "carrito__compra__form__btnpagar carrito__compra__form__btnpagar carrito__compra__form__btnpagar"
+            ;
+            grid-area: carrito__compra__form;
+
+            div {
+                label {
+                    grid-area: valor;
+                    color: #481414;
+                }
+
+                .carrito__compra__form__btnmenos {
+                    width: 10%;
+                    grid-area: carrito__compra__form__btnmenos;
+                }
+
+                .carrito__compra__form__btnmas {
+                    width: 10%;
+                    grid-area: carrito__compra__form__btnmas;
+                }
+            }
+
+            .carrito__compra__form__btnpagar {
+                grid-area: carrito__compra__form__btnpagar;
+            }
+
+            input {
+                background-color: #FFBC0C;
+                color: #481414;
+                border: #FFBC0C;
+            }
+        }
+    }
+}

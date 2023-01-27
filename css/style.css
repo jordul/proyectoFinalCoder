@@ -1,0 +1,333 @@
+#carrito {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#carrito .carrito__compra {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "carrito__compra__img carrito__compra__descripcion" "carrito__compra__img carrito__compra__form";
+}
+#carrito .carrito__compra .carrito__compra__img {
+  margin-left: 1rem;
+  width: 100%;
+  grid-area: carrito__compra__img;
+}
+#carrito .carrito__compra .carrito__compra__img img {
+  width: 90%;
+  align-items: center;
+}
+#carrito .carrito__compra .carrito__compra__descripcion {
+  width: 60%;
+  grid-area: carrito__compra__descripcion;
+}
+#carrito .carrito__compra .carrito__compra__descripcion h2,
+#carrito .carrito__compra .carrito__compra__descripcion p {
+  color: #481414;
+}
+#carrito .carrito__compra .carrito__compra__form {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "valor carrito__compra__form__btnmas carrito__compra__form__btnmenos" "carrito__compra__form__btnpagar carrito__compra__form__btnpagar carrito__compra__form__btnpagar";
+  grid-area: carrito__compra__form;
+}
+#carrito .carrito__compra .carrito__compra__form div label {
+  grid-area: valor;
+  color: #481414;
+}
+#carrito .carrito__compra .carrito__compra__form div .carrito__compra__form__btnmenos {
+  width: 10%;
+  grid-area: carrito__compra__form__btnmenos;
+}
+#carrito .carrito__compra .carrito__compra__form div .carrito__compra__form__btnmas {
+  width: 10%;
+  grid-area: carrito__compra__form__btnmas;
+}
+#carrito .carrito__compra .carrito__compra__form .carrito__compra__form__btnpagar {
+  grid-area: carrito__compra__form__btnpagar;
+}
+#carrito .carrito__compra .carrito__compra__form input {
+  background-color: #FFBC0C;
+  color: #481414;
+  border: #FFBC0C;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+#header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: #FFBC0C;
+}
+#header .logo {
+  align-items: center;
+  display: grid;
+}
+#header .logo a {
+  justify-items: center;
+  display: grid;
+}
+#header .logo a img {
+  width: 40%;
+  align-items: center;
+}
+#header nav {
+  display: grid;
+  justify-items: stretch;
+}
+#header nav .menu__direccion {
+  grid-area: direccion;
+  display: grid;
+  font-size: 1fr;
+  position: relative;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "productos" "submenu";
+  align-items: center;
+}
+#header nav .menu__direccion .menu__direccion__submenu {
+  display: grid;
+  position: absolute;
+  top: 10%;
+  grid-area: submenu;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+#header nav .menu__direccion .menu__direccion__submenu a {
+  text-decoration: none;
+}
+#header nav .menu__direccion .menu__direccion__submenu a:visited {
+  color: #481414;
+}
+#header nav .menu__direccion:hover .menu__direccion__submenu {
+  visibility: visible;
+  opacity: 1;
+}
+#header nav .menu__productos {
+  grid-area: productos;
+  display: grid;
+  font-size: 1fr;
+  position: relative;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "productos" "submenu";
+  align-items: center;
+  justify-items: end;
+}
+#header nav .menu__productos .menu__productos__submenu {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, 7fr);
+  position: absolute;
+  top: 10%;
+  grid-area: submenu;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.5s;
+  background-color: #FFBC0C;
+  border-radius: 0 0 3% 3%;
+}
+#header nav .menu__productos .menu__productos__submenu a {
+  text-decoration: none;
+}
+#header nav .menu__productos .menu__productos__submenu a:visited {
+  color: #481414;
+}
+#header nav .menu__productos:hover .menu__productos__submenu {
+  visibility: visible;
+  opacity: 1;
+}
+#header nav .menu__precios {
+  grid-area: precios;
+  display: grid;
+  font-size: 1fr;
+  position: relative;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "precios" "submenu";
+  align-items: center;
+  justify-items: end;
+}
+#header nav .menu__precios .menu__precios_submenu {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 5fr);
+  position: absolute;
+  top: 10%;
+  grid-area: submenu;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.5s;
+  background-color: #FFBC0C;
+}
+#header nav .menu__precios .menu__precios_submenu a {
+  text-decoration: none;
+}
+#header nav .menu__precios .menu__precios_submenu a:visited {
+  color: #481414;
+}
+#header nav .menu__precios:hover .menu__precios_submenu {
+  visibility: visible;
+  opacity: 1;
+}
+#header nav .menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "direccion productos precios";
+}
+#header nav .menu li {
+  color: #481414;
+}
+#header .icon {
+  align-items: center;
+  display: grid;
+}
+#header .icon a {
+  justify-items: center;
+  display: grid;
+}
+#header .icon a img {
+  width: 20%;
+  align-items: center;
+}
+#header .icon .icon__user {
+  justify-items: end;
+}
+
+#contenido {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "productosDestacados" "productos";
+}
+#contenido .productosDestacados {
+  display: grid;
+  grid-area: productosDestacados;
+}
+#contenido .productosDestacados figure {
+  width: 100%;
+}
+#contenido .productosDestacados figure img {
+  width: 100%;
+  height: 600px;
+}
+#contenido .productos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "card1 card2";
+  grid-area: productos;
+  justify-items: stretch;
+  align-items: stretch;
+  padding: 20px;
+}
+#contenido .productos div {
+  display: grid;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  row-gap: 1rem;
+  height: 100%;
+}
+#contenido .productos img {
+  width: 20%;
+  align-items: center;
+}
+#contenido .productos .card1,
+#contenido .productos .card2,
+#contenido .productos .card3,
+#contenido .productos .card4 {
+  background-color: #FFBC0C;
+  justify-items: center;
+  display: grid;
+  grid-area: card1;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "productoCardTitulo" "imgfigura" "productoContenido";
+  border-radius: 3em;
+}
+#contenido .productos .card1 .productoCardTitulo,
+#contenido .productos .card2 .productoCardTitulo,
+#contenido .productos .card3 .productoCardTitulo,
+#contenido .productos .card4 .productoCardTitulo {
+  grid-area: productoCardTitulo;
+  display: grid;
+  align-items: center;
+}
+#contenido .productos .card1 figure,
+#contenido .productos .card2 figure,
+#contenido .productos .card3 figure,
+#contenido .productos .card4 figure {
+  grid-area: imgfigura;
+  display: grid;
+  justify-items: center;
+}
+#contenido .productos .card1 .productoContenido,
+#contenido .productos .card2 .productoContenido,
+#contenido .productos .card3 .productoContenido,
+#contenido .productos .card4 .productoContenido {
+  grid-area: productoContenido;
+  display: grid;
+  align-items: center;
+}
+
+#footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "footer__contacto" "fotter__redesSociales";
+  background-color: #481414;
+}
+#footer .footer__contacto {
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "footer__contacto1 footer__contacto2";
+  grid-area: footer__contacto;
+}
+#footer .footer__contacto .footer__contacto1 {
+  display: grid;
+  grid-area: footer__contacto1;
+  justify-items: center;
+  align-items: center;
+}
+#footer .footer__contacto .footer__contacto2 {
+  display: grid;
+  grid-area: footer__contacto2;
+  justify-items: center;
+  align-items: center;
+}
+#footer .footer__contacto .footer__contacto2 a {
+  text-decoration: none;
+}
+#footer .footer__contacto .footer__contacto2 a:visited {
+  color: white;
+}
+#footer .fotter__redesSociales {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-area: fotter__redesSociales;
+  justify-items: end;
+}
+#footer .fotter__redesSociales figure {
+  justify-items: end;
+}
+#footer .fotter__redesSociales figure img {
+  width: 10%;
+}/*# sourceMappingURL=style.css.map */
