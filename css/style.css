@@ -54,6 +54,45 @@
   border: #FFBC0C;
 }
 
+#login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#login .card {
+  z-index: 0;
+  background-color: #FFBC0C;
+  border-color: #FFBC0C;
+  color: #481414;
+  width: 40%;
+  margin: 2%;
+}
+#login .card .card-body .tituloregistro {
+  display: flex;
+  justify-content: center;
+}
+#login .card .card-body .col-auto {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#login .card .card-body .col-auto .btn {
+  width: auto;
+  background-color: #481414;
+  border-color: #481414;
+}
+#login .card .card-body .col-auto .session, #login .card .card-body .col-auto .olvidoClave {
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+#login .card .card-body .col-auto .session a, #login .card .card-body .col-auto .olvidoClave a {
+  color: #481414;
+}
+#login .card .card-body .col-auto .olvidoClave {
+  justify-content: flex-end;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -104,6 +143,7 @@ ul {
   visibility: hidden;
   opacity: 0;
   transition: opacity 1.5s;
+  z-index: 2;
 }
 #header nav .menu__direccion .menu__direccion__submenu a {
   text-decoration: none;
@@ -139,6 +179,7 @@ ul {
   transition: opacity 1.5s;
   background-color: #FFBC0C;
   border-radius: 0 0 3% 3%;
+  z-index: 2;
 }
 #header nav .menu__productos .menu__productos__submenu a {
   text-decoration: none;
@@ -173,6 +214,7 @@ ul {
   opacity: 0;
   transition: opacity 1.5s;
   background-color: #FFBC0C;
+  z-index: 2;
 }
 #header nav .menu__precios .menu__precios_submenu a {
   text-decoration: none;

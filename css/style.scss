@@ -1,4 +1,5 @@
 @import "./carrito";
+@import "./login";
 
 * {
     margin: 0;
@@ -55,7 +56,7 @@ ul {
                 visibility: hidden;
                 opacity: 0;
                 transition: opacity 1.5s;
-
+                z-index: 2;
                 a {
                     text-decoration: none;
 
@@ -96,6 +97,7 @@ ul {
                 transition: opacity 1.5s;
                 background-color: #FFBC0C;
                 border-radius: 0 0 3% 3%;
+                z-index: 2;
                 a {
                     text-decoration: none;
 
@@ -135,6 +137,7 @@ ul {
                 opacity: 0;
                 transition: opacity 1.5s;
                 background-color: #FFBC0C;
+                z-index: 2;
                 a {
                     text-decoration: none;
 

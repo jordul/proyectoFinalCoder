@@ -1,0 +1,42 @@
+#login {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .card {
+        z-index: 0;
+        background-color: #FFBC0C;
+        border-color: #FFBC0C;
+        color: #481414;
+        width: 40%;
+        margin: 2%;
+        .card-body{
+            .tituloregistro{
+                display: flex;
+                justify-content: center;
+            }
+            .col-auto{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                .btn{
+                    width: auto;
+                    background-color: #481414;
+                    border-color: #481414;
+                }
+                .session, .olvidoClave{
+                    width: auto;
+                    display: flex;
+                    justify-content: center;
+                    a{
+                        color: #481414;
+                    }
+                }
+                .olvidoClave{
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+
+}
