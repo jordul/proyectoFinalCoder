@@ -1,0 +1,140 @@
+@import './mixin';
+/*----------Media query pantallas pequeñas has medianas 768---------------------------------------------*/
+@media only screen and (min-width: 350px) and (max-width:767px) {
+    #container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1, 5fr 2fr 1fr;
+        grid-template-areas:
+            "navbar"
+            "contenido"
+            "footer";
+
+        #header {
+            grid-area: navbar;
+            @include grid(1fr 1fr,null,null);
+            padding: 1% 2% 1% 2%;
+
+            .logo {
+                a {
+                    justify-items: start;
+
+                    img {
+                        width: 20%;
+                    }
+                }
+
+            }
+
+            nav {
+                @include grid(null,null,null);
+                justify-items: stretch;
+
+                .menu {
+                    display: none;
+                }
+
+                .mobile {
+                    @include grid(1fr,1fr,null);
+                    .menu__mobile {
+                        @include grid(1fr,1fr,null);
+                        figure {
+                            align-items: center;
+                            @include grid(null,null,null);
+                            justify-items: end;
+
+                            img {
+                                width: 15%;
+                            }
+                        }
+
+                        .menu__hamburegesa__submenu {
+                            width: 50%;
+                            height: 100vh;
+                            @include grid(null,null,null);
+                            grid-template-rows: 5% 5% 5%;
+                            justify-content: center;
+                            position: absolute;
+                            top: 9%;
+                            grid-area: submenu;
+                            visibility: hidden;
+                            opacity: 0;
+                            transition: opacity 1.5s;
+                            background-color: #FFBC0C;
+                            border-radius: 0 0 3% 3%;
+                            z-index: 2;
+                            padding-top: 5%;
+                            a {
+                                text-decoration: none;
+                                font-size: 1em;
+                                &:visited {
+                                    color: #481414;
+                                }
+                            }
+
+                            figure {
+                                align-items: center;
+                                @include grid(null,null,null);
+                                justify-items: end;
+
+                                img {
+                                    width: 15%;
+                                }
+                            }
+                        }
+
+                        &:hover .menu__hamburegesa__submenu {
+                            visibility: visible;
+                            opacity: 1;
+
+                            &:hover .menu__hamburegesa__submenu {
+                                display: none;
+                            }
+                        }
+
+                    }
+                }
+
+            }
+
+            .icon {
+                display: none;
+            }
+
+
+        }
+
+        #login{
+            .card{
+                width: 96%;
+            }
+            
+        }
+
+        #carrito{
+            width: 100%;
+            .carrito__compra__descripcion{
+                width: 100%;
+            }
+        }
+    }
+
+};
+
+@media (min-width: 768px) and (max-width:1200px) {
+    #container {
+        
+        grid-template-areas:
+            "navbar"
+            "contenido"
+            "footer";
+
+        #login{
+            .card{
+                width: 72%;
+            }
+            
+        }
+    }
+
+}

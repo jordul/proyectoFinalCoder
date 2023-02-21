@@ -1,0 +1,12 @@
+@mixin grid($columns,$rows,$area ){
+    display: grid;
+    @if $columns!= null {
+        grid-template-columns: $columns;
+    }
+    @if $rows!= null {
+        grid-template-rows: $rows;
+    }
+    @if $area != null {
+        grid-template-areas: $area; 
+    }
+}
